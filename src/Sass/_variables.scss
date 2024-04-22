@@ -1,0 +1,76 @@
+$primery-color: #ff5722;
+$secodery-color: #FFA589;
+$bg-card: #FFF6F2;
+$bg-navbar: #F8F8F8;
+$body-color: #333333;
+$heading-color: #000;
+$--footer-color: #0B0D17;
+$border-radious: 32px;
+// beakpoint 
+$xs-breakpiont: 320px;
+$sm-breakpoint: 480px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 1024px;
+$xl-breakpoint: 1280px;
+$xxl-breakpoint: 1536px;
+
+
+//mixin
+// @mixin flex() {
+//   display: flex;
+//   @content;
+// }
+
+%display-flex {
+  display: flex;
+  align-items: center;
+}
+
+%logo-icon-style {
+  display: inline-block;
+  height: 5px;
+
+}
+
+%toggle-style {
+  width: 100%;
+  height: 2px;
+  background-color: var(--heading-color);
+}
+
+%common_activeBtn_style {
+  transition: all .3s ease-in-out;
+  transform-origin: left center;
+}
+
+@mixin mediaQuery($screen: 'sm', $width: min-width) {
+  @if($screen=='sm') {
+    @media($width: $sm-breakpoint) {
+      @content;
+    }
+  }
+
+  @if($screen=='md') {
+    @media($width: $md-breakpoint) {
+      @content;
+    }
+  }
+
+  @if($screen=='lg') {
+    @media($width: $lg-breakpoint) {
+      @content;
+    }
+  }
+
+  @if($screen=='xl') {
+    @media($width: $xl-breakpoint) {
+      @content;
+    }
+  }
+
+  @if($screen=='xxl') {
+    @media($width: $xxl-breakpoint) {
+      @content;
+    }
+  }
+}
